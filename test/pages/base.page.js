@@ -13,11 +13,17 @@ export default class basePage {
     goToHomePage() {
 
         console.log('step: going to home page')
+
         browser.url('/')
+
         this.mainHeader.waitForDisplayed()
+
         console.log('step: on the home page')
 
     }
+
+
+
 
 }
 
