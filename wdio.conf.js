@@ -68,13 +68,11 @@ exports.config = {
                 '--disable-dev-shm-usage',
                 '--no-sandbox',
                 '--window-size=1800,1200',
-                //   '--start-fullscreen'
             ] : [
                     '--disable-gpu',
                     '--disable-dev-shm-usage',
                     '--no-sandbox',
                     '--window-size=1800,1200',
-                    //   '--start-fullscreen'
                 ],
             prefs: {
                 'download.default_directory': downloadDir,
