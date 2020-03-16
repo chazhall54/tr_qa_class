@@ -22,7 +22,13 @@ export default class basePage {
 
     }
 
+    //** Utilities */
 
+    assert(assertion, timeout) {
+        browser.waitUntil(()=>{
+            return assertion;
+        }, timeout)
+    }
 
 
 }
