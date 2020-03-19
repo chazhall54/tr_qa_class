@@ -113,6 +113,11 @@ pipeline {
 
 ```
 
+Once our pipeline builds, Automate the pipeline. 
+- Add above groovy script to Jenkinsfile in the root of your directory and push to your repo
+- In your Jenkins pipeline, change the Pipeline script to Pipeline script from SCM and choose Git
+- Paste your github url and save
+
 <br>
 
 ---
