@@ -122,4 +122,78 @@ Once our pipeline builds, Automate the pipeline.
 
 ---
 
-## Reporting
+## Allure Reporting in Jenkins
+
+Install the wdio-allure plugin
+``` bash
+npm install @wdio/allure-reporter --save-dev
+```
+<br>
+
+Add allure reporter to your wdio.conf.js
+``` javascript
+    reporters: ['spec', ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
+```
+
+<br>
+
+
+add screenshots on failure
+``` javascript
+afterTest: function(test) {
+    if (test.error !== undefined) {
+      browser.takeScreenshot();
+    }
+  }
+```
+
+<br>
+
+
+add Allure to pipeline steps
+``` groovy
+stage('reports') {
+   steps {
+      script {
+         allure([
+            includeProperties: false,
+            jdk: '',
+            properties: [],
+            reportBuildPolicy: 'ALWAYS',
+            results: [[path: 'allure-results']]
+         ])
+      }
+   }
+}
+```
+
+<br>
+
+
+add report script to your package.json for local execution
+``` javascript
+"report": "allure generate allure-results/ && allure open"
+```
+
+<br>
+
+
+add to git ignore
+``` bash
+allure-reports
+allure-results
+```
+
+<br>
+
+
+add Allure to Jenkins
+- manage jenkins
+- manage plugins
+- search for Allure and download without restart
+- global tool configuration
+
