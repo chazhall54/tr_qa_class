@@ -22,5 +22,19 @@ pipeline {
             sh 'headless=true npm run test'
          }
       }
+
+      stage('reports') {
+         steps {
+            script {
+               allure([
+                  includeProperties: false,
+                  jdk: '',
+                  properties: [],
+                  reportBuildPolicy: 'ALWAYS',
+                  results: [[path: 'allure-results']]
+               ])
+            }
+         }
+      }
    }
 }
