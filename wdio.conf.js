@@ -226,12 +226,8 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    afterTest: function (test, context, { error, result, duration, passed, retries }) {
-
-        if (test.error !== undefined) {
-            browser.takeScreenshot();
-          }
-    },
+    // afterTest: function (test, context, { error, result, duration, passed, retries }) {
+    // },
     /**
      * Hook that gets executed after the suite has ended
      * @param {Object} suite suite details
