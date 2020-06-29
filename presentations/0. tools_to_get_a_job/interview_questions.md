@@ -58,3 +58,15 @@
 	- > If you dont know Docker, state that the devops engineer helped with building the docker container******
 - Have used Selenium Grid?
 	- No since the application we used was mainly used in Chrome, but I am aware that the Selenium grid allows us to run tests in virtual machines with different operating systems and browsers. 
+
+
+# Do you have any questions?
+
+- Can you tell me more about your tech stack?
+	- Desktop apps: C++, Java, etc.
+	- Web apps: Consist of a frontend framework, server side scripting language, and a database
+		- Frontend: JQuery, React, Angular, etc.
+		- Backend Server side script: Django (Python), Express (node.js), PHP, Java (Spring)
+		- Database: SQL Server, Oracle, MySQL, MongoDB, postgresql
+
+- What will you expect in the first few months from the candidate you choose?
