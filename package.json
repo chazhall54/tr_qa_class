@@ -19,6 +19,8 @@
     "must": "^0.13.4"
   },
   "dependencies": {
-    "@wdio/cli": "^6.1.11"
+    "@wdio/cli": "^6.1.11",
+    "dotenv": "^8.2.0",
+    "faker": "^5.4.0"
   }
 }

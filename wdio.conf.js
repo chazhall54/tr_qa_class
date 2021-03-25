@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
+
 const headless = process.env.headless;
 
 global.downloadDir = path.join(__dirname, 'tempDownload');
@@ -196,6 +197,7 @@ exports.config = {
      */
     beforeSession: function (config, capabilities, specs) {
         require('must/register')
+        require('dotenv').config()
     },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
