@@ -1,6 +1,4 @@
-import basePage from "../../pages/base.page";
-
-const homePage = new basePage()
+const homePage = require('../../pages/home.page')
 
 describe('Smoke test the home page', () => {
     
@@ -9,9 +7,10 @@ describe('Smoke test the home page', () => {
     });
 
     it('Then validate that the page headers', () => {
-        homePage.mainHeader.getText().includes('Welcome to the-internet')
-        homePage.subHeader.getText().includes('Available Examples')
+        homePage.mainHeader().getText().must.equal('Welcome to the-internet')
 
+        homePage.subHeader().getText().must.include('Available')
+        
     });
 
 
